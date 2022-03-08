@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>O que é Git?</h1>
+    <p>O Git é um sistema que grava as mudanças feitas em nossos arquivos ao longo do tempo por meio de "snapshots"</p>
+    <p>Ele te permite voltar em uma determinada mudança no código a qualquer momento</p>
+    <p>Permite a colaboração de vários desenvolvedores no projeto</p>
+
+    <h2>Fluxo Git</h2>
+    <p>+ git init: Inicializa o repositório Git (necessário)</p>
+    <p>+ git add _file_ : prepara um arquivo pra ser commitado <strong>commitados</strong></p>
+    <p>+ git commit -m "mensagem": Faz o commit dos arquivos preparados. Na "mensagem" você pode colocar as alterações que foram feitas no código</p>
+
+
+    <ruby>
+        Commit: <rt>É basicamente quando se é tirado um "print" do seu arquivo para guardar a versão dele</rt>
+    </ruby>
+
+    <!-- COMANDOS -->
+    <h3>Comandos</h3>
+    <p>+ git status: Mostra os "Untracked files" que são os arquivos que não estão preparados para commits mas que possuem
+        modificações. Para prepará-los para commit use o comando "git add"
+    </p>
+
+    <p>+ git rm --cached _file_: Desmonta a prepraração do arquivo para commit</p>
+
+    <p>+ git add .: Preprara TODOS os arquivos para serem commitados</p>
+
+    <p>+ git log: Serve para ver todos os seus commits</p>
+
+    <p>+ git branch: Visualiza os branchs</p>
+
+    <p>+ git branch _nome_do_novo_branch : cria um novo branch</p>
+
+    <p>+ git checkout _branch: Muda para o branch especificado</p>
+
+    <p>+ git merge _branch : Faz uma junção de branchs</p>
+
+    <p>+ git clone _url_do_repositorio: Clona um repositório remoto na sua máquina ( feito por meio do git bash dentro da pasta onde vai ficar o clone)</p>
+
+    
+
+    <!-- IGNORAR ARQUIVOS PARA NÃO SEREM COMMITADOS-->
+    <h3>Arquivos que você não quer que sejam commitados</h3>
+
+    <p>Quando você estiver trabalhando em algum projeto e for querer commitar os seus arquivos, talvez tenha um ou outro arquivo que você não queira que seja
+        commitado, seja por possuir informações pessoais, delicadas ou qualquer outra coisa do gênero. Para solucionar esse problema você deve criar um arquivo
+        chamado ".gitignore" e nele adicionar os arquivos que você quer que sejam ignorados quando você for fazer um commit
+    </p>
+
+
+    <!-- Branch -->
+    <h3>Entendendo sobre branch</h3>
+
+    <p>Basicamente branch são pastas de arquivos. No mundo coorporativo, por exemplo, existem dois ambientes, um onde os códigos são criados, testados,
+        atualizados, corrigidos, etc, e outro onde o aplicativo ou programa roda e funciona normalmente para os clientes. Nesses dois ambientes podemos dizer que
+        cada um é um branch
+    </p>
+    
+
+    <!-- GitHub -->
+    <p>Basicamente o github é uma plataforma que vai armazenar todos os seus projetos na nuvem, ou seja, ele vai criar um repositório remoto</p>
+
+    <h1>Criando um repositório remoto</h1>
+
+    <ol>
+        <li>No próprio github vá em new repository e crie o seu novo repositório colocando o nome dele</li>
+        <li>Agora você precisa trazer o seu repositório local(Ja precisa ter criado) para o remoto e isso vai ser feito por alguns comandos simples no terminal do git no vscode</li>
+        <ul>
+            <li>1- git remote add origin https://github.com/AndreySilvaa/curso-git-e-github.git: Adiciona um repositório remoto com o nome origin</li>
+            <li>2- git branch -M main: Muda o nome do branch de produção de master para main (é uma mudança que o github tá fazendo)</li>
+            <li>3- git push -u origin main: Manda todos os seus arquivos e pastas do seu repositório local, para o seu repositório remoto origin, no branch main.
+                <p>+ Para você dar esse comando push você deve estar no branch que você quer enviar</p>
+            </li>
+        </ul>
+    </ol>
+
+    <h1>Clonando um repositório</h1>
+    <ul>
+        <li>Na pasta que você quer colocar o clone, abra o git bash nela(terminal do git)</li>
+        <li>Coloque o comando: git clone _url_do_repositorio</li>
+    </ul>
+
+    <h1>Atualizando um repositório local (git clone)</h1>
+
+    <p>Para fazer atualizações no seu repositório local você pode utilizar os seguintes comandos:</p>
+    <ul>
+        <li>git pull: Vai atualizar todos os branchs, todos os arquivos, pastas, etc, enfim, tudo, para igual ao que está no repositório remoto.(No exemplo do video
+            essa atualização foi feita no branch main)
+        </li>
+        <li>git pull origin _branch: Atualiza apenas um branch especifico (No exemplo do video foi feito no branch em que se desejava atualizar)</li>
+    </ul>
+</body>
+</html>
